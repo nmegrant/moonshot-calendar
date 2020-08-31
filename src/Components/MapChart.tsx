@@ -27,6 +27,7 @@ export default function MapChart() {
 
   const [showText, setShowText] = useState(false);
 
+  //display/hide text depending on mouse hover
   function displayInfo(event: MouseEvent) {
     event.preventDefault();
     setShowText(true);
@@ -44,12 +45,14 @@ export default function MapChart() {
   const [selectStartDate, setSelectStartDate] = useState("");
   const [selectEndDate, setSelectEndDate] = useState("");
 
+  //intial fetch of launches
   useEffect(() => {
     const fetchLaunchDate = async () => {
       try {
         const response = await axios.get(
           `https://launchlibrary.net/1.3/launch/${currentDate}/${futureDate}/?limit=100`
         );
+        //meant to come back and update this type - used any to get it running but wouldn't leave it like this.
         markers = response.data.launches.map((l: any) => {
           return {
             markerOffset: 15,
