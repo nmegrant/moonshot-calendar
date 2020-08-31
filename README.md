@@ -26,6 +26,11 @@ My main goal was to get something that the user could navigate to and see launch
 - I didn't want to hardcode in the 3 month upcoming launch window, so I used moment.js to get the current date and the date 3 months ahead. I thought this was important since hardcoding the dates would have been fine for today, but that is not at all how a real website would work - I wanted it to be responsive and dynamic. 
 - If I had the time I would have added in more checks for the date. E.g. make sure the user can't select an end date before the start date
 
+#### Other libraries
+
+- [react-bootstrap](https://react-bootstrap.github.io/)
+- axios
+
 ### Other Comments 
 
 - I meant to change the type any on line 54 - I would not leave it as type any normally. I didn't notice I hadn't changed it til reviewing for documentation.
